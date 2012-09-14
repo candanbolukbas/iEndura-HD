@@ -1,0 +1,285 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD2862911603A9DE0038C95B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2862901603A9DE0038C95B /* UIKit.framework */; };
+		AD2862931603A9DE0038C95B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2862921603A9DE0038C95B /* Foundation.framework */; };
+		AD2862951603A9DE0038C95B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2862941603A9DE0038C95B /* CoreGraphics.framework */; };
+		AD28629B1603A9DE0038C95B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD2862991603A9DE0038C95B /* InfoPlist.strings */; };
+		AD28629D1603A9DE0038C95B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD28629C1603A9DE0038C95B /* main.m */; };
+		AD2862A11603A9DE0038C95B /* IEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2862A01603A9DE0038C95B /* IEAppDelegate.m */; };
+		AD2862A41603A9DE0038C95B /* IEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2862A31603A9DE0038C95B /* IEViewController.m */; };
+		AD2862A71603A9DE0038C95B /* IEViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2862A51603A9DE0038C95B /* IEViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AD28628C1603A9DE0038C95B /* iEndura HD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iEndura HD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD2862901603A9DE0038C95B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AD2862921603A9DE0038C95B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AD2862941603A9DE0038C95B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AD2862981603A9DE0038C95B /* iEndura HD-Info.plist */ = {isa = PBXFileReference; path = "iEndura HD-Info.plist"; sourceTree = "<group>"; };
+		AD28629A1603A9DE0038C95B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AD28629C1603A9DE0038C95B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AD28629E1603A9DE0038C95B /* iEndura HD-Prefix.pch */ = {isa = PBXFileReference; path = "iEndura HD-Prefix.pch"; sourceTree = "<group>"; };
+		AD28629F1603A9DE0038C95B /* IEAppDelegate.h */ = {isa = PBXFileReference; path = IEAppDelegate.h; sourceTree = "<group>"; };
+		AD2862A01603A9DE0038C95B /* IEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IEAppDelegate.m; sourceTree = "<group>"; };
+		AD2862A21603A9DE0038C95B /* IEViewController.h */ = {isa = PBXFileReference; path = IEViewController.h; sourceTree = "<group>"; };
+		AD2862A31603A9DE0038C95B /* IEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IEViewController.m; sourceTree = "<group>"; };
+		AD2862A61603A9DE0038C95B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/IEViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD2862891603A9DE0038C95B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD2862911603A9DE0038C95B /* UIKit.framework in Frameworks */,
+				AD2862931603A9DE0038C95B /* Foundation.framework in Frameworks */,
+				AD2862951603A9DE0038C95B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD2862811603A9DE0038C95B = {
+			isa = PBXGroup;
+			children = (
+				AD2862961603A9DE0038C95B /* iEndura HD */,
+				AD28628F1603A9DE0038C95B /* Frameworks */,
+				AD28628D1603A9DE0038C95B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD28628D1603A9DE0038C95B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD28628C1603A9DE0038C95B /* iEndura HD.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD28628F1603A9DE0038C95B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD2862901603A9DE0038C95B /* UIKit.framework */,
+				AD2862921603A9DE0038C95B /* Foundation.framework */,
+				AD2862941603A9DE0038C95B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD2862961603A9DE0038C95B /* iEndura HD */ = {
+			isa = PBXGroup;
+			children = (
+				AD28629F1603A9DE0038C95B /* IEAppDelegate.h */,
+				AD2862A01603A9DE0038C95B /* IEAppDelegate.m */,
+				AD2862A21603A9DE0038C95B /* IEViewController.h */,
+				AD2862A31603A9DE0038C95B /* IEViewController.m */,
+				AD2862A51603A9DE0038C95B /* IEViewController.xib */,
+				AD2862971603A9DE0038C95B /* Supporting Files */,
+			);
+			path = "iEndura HD";
+			sourceTree = "<group>";
+		};
+		AD2862971603A9DE0038C95B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD2862981603A9DE0038C95B /* iEndura HD-Info.plist */,
+				AD2862991603A9DE0038C95B /* InfoPlist.strings */,
+				AD28629C1603A9DE0038C95B /* main.m */,
+				AD28629E1603A9DE0038C95B /* iEndura HD-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD28628B1603A9DE0038C95B /* iEndura HD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD2862AA1603A9DE0038C95B /* Build configuration list for PBXNativeTarget "iEndura HD" */;
+			buildPhases = (
+				AD2862881603A9DE0038C95B /* Sources */,
+				AD2862891603A9DE0038C95B /* Frameworks */,
+				AD28628A1603A9DE0038C95B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iEndura HD";
+			productName = "iEndura HD";
+			productReference = AD28628C1603A9DE0038C95B /* iEndura HD.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD2862831603A9DE0038C95B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IE;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "T.C. Cumhurbaşkanlığı";
+			};
+			buildConfigurationList = AD2862861603A9DE0038C95B /* Build configuration list for PBXProject "iEndura HD" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AD2862811603A9DE0038C95B;
+			productRefGroup = AD28628D1603A9DE0038C95B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD28628B1603A9DE0038C95B /* iEndura HD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD28628A1603A9DE0038C95B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD28629B1603A9DE0038C95B /* InfoPlist.strings in Resources */,
+				AD2862A71603A9DE0038C95B /* IEViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD2862881603A9DE0038C95B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD28629D1603A9DE0038C95B /* main.m in Sources */,
+				AD2862A11603A9DE0038C95B /* IEAppDelegate.m in Sources */,
+				AD2862A41603A9DE0038C95B /* IEViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AD2862991603A9DE0038C95B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD28629A1603A9DE0038C95B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AD2862A51603A9DE0038C95B /* IEViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD2862A61603A9DE0038C95B /* en */,
+			);
+			name = IEViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD2862A81603A9DE0038C95B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		AD2862A91603A9DE0038C95B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD2862AB1603A9DE0038C95B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iEndura HD/iEndura HD-Prefix.pch";
+				INFOPLIST_FILE = "iEndura HD/iEndura HD-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AD2862AC1603A9DE0038C95B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iEndura HD/iEndura HD-Prefix.pch";
+				INFOPLIST_FILE = "iEndura HD/iEndura HD-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD2862861603A9DE0038C95B /* Build configuration list for PBXProject "iEndura HD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD2862A81603A9DE0038C95B /* Debug */,
+				AD2862A91603A9DE0038C95B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD2862AA1603A9DE0038C95B /* Build configuration list for PBXNativeTarget "iEndura HD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD2862AB1603A9DE0038C95B /* Debug */,
+				AD2862AC1603A9DE0038C95B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD2862831603A9DE0038C95B /* Project object */;
+}
