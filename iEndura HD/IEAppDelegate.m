@@ -18,6 +18,7 @@
 #import "IESettingsViewController.h"
 #import "IESearchViewController.h"
 #import "IECamPlayViewController.h"
+#import "IEConnController.h"
 
 @implementation IEAppDelegate
 
@@ -111,7 +112,6 @@
     detailsViewController = [[IEDetailViewController alloc] initWithNibName:@"IEDetailViewController" bundle:nil];
     UINavigationController *detailsNavController = [[UINavigationController alloc] initWithRootViewController:detailsViewController];
     detailsViewController.title = @"No Camera Selected";
-
 	
     splitViewController.viewControllers = [NSArray arrayWithObjects:tabBarController, detailsNavController, nil];
     splitViewController.delegate = detailsViewController;
@@ -165,12 +165,31 @@
     splitViewController = [[UISplitViewController alloc] init];
     [self setUpTabBar];
     [self.window makeKeyAndVisible];
-    //self.window.rootViewController = self.viewController;
+    authTimer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(extendSessionTime:) userInfo:nil repeats:YES];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)extendSessionTime:(NSTimer *)theTimer
+{
+    dispatch_async(IENDURA_DISPATCH_QUEUE, ^{
+        NSData* data = [NSData dataWithContentsOfURL:[IEServiceManager GetAuthenticationUrlFromUsrPass]];
+        [self performSelectorOnMainThread:@selector(fetchedData:)
+                               withObject:data waitUntilDone:YES];
+    });
+}
+
+- (void)fetchedData:(NSData *)responseData
+{
+    NSDictionary *jsDict = [IEHelperMethods getExtractedDataFromJSONItem:responseData];
+    SimpleClass *sc = [[SimpleClass alloc] initWithDictionary:jsDict];
+    if ([sc.Id isEqualToString:POZITIVE_VALUE])
+    {
+        APP_DELEGATE.userSeesionId = sc.Value;
+    }
 }
 
 @end

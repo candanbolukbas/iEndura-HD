@@ -155,6 +155,11 @@
     return [self shouldAutorotateToInterfaceOrientation:self.interfaceOrientation];
 }
 
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
 - (void) finishedWithData:(NSData *)data forTag:(iEnduraRequestTypes)tag withObject:(NSObject *)additionalParameters
 {
 	if (tag == IE_Req_Auth) 

@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIView *overlayView;
 @property (nonatomic, assign) BOOL fullScreen;
 @property (nonatomic,assign) int selectedImageViewIndex;
+@property (weak, nonatomic) IBOutlet UILabel *camNameLabel;
 
 - (IBAction)imageViewTouchAction;
 - (IBAction)imageSwipeLeftAction;

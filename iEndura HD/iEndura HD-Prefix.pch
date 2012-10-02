@@ -25,4 +25,5 @@
     #import "IECameraClass.h"
     #import "IECameraLocation.h"
     #import "IEServiceManager.h"
+    #import "IERootNavigationViewController.h"
 #endif

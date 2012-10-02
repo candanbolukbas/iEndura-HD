@@ -248,6 +248,11 @@
     return [self shouldAutorotateToInterfaceOrientation:self.interfaceOrientation];
 }
 
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
 - (void)UpdateImage:(NSTimer *)theTimer 
 {
     NSURL *camImgUrl = [IEServiceManager GetCamImgUrl:CurrentCamera.IP];

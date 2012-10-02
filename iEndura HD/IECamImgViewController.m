@@ -32,6 +32,7 @@
 {
     [super viewDidLoad];
     connectionReady = YES;
+    self.camNameLabel.text = CurrentCamera.Name;
 }
 
 - (void)viewDidUnload
@@ -40,6 +41,7 @@
     [self setImageTimer:nil];
     CurrentCamera = nil;
     [self setOverlayView:nil];
+    [self setCamNameLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -63,6 +65,11 @@
 - (BOOL)shouldAutorotate
 {
     return [self shouldAutorotateToInterfaceOrientation:self.interfaceOrientation];
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
 }
 
 - (void)UpdateImage:(NSTimer *)theTimer 
@@ -98,7 +105,13 @@
 - (IBAction)imageViewTouchAction 
 {
     if(fullScreen)
+    {
         [self dismissModalViewControllerAnimated:YES];
+    }
+    else if (CurrentCamera ==nil)
+    {
+        ; //do nothing
+    }
     else
     {
         IECamImgViewController *civc = [[IECamImgViewController alloc] init];
@@ -148,6 +161,7 @@
     [self setImageTimer:nil];
     screenshotImageView.image = [UIImage imageNamed:@"connecting.png"];
     APP_DELEGATE.currCam = CurrentCamera;
+    self.camNameLabel.text = CurrentCamera.Name;
     [self SetScreenShotImage];
 }
 

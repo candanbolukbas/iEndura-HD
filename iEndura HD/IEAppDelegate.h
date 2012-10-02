@@ -14,6 +14,9 @@
 @class IECamPlayViewController;
 
 @interface IEAppDelegate : UIResponder <UIApplicationDelegate, UINavigationControllerDelegate, UITabBarControllerDelegate, UISplitViewControllerDelegate>
+{
+    NSTimer *authTimer;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) IBOutlet UITabBarController *tabBarController;

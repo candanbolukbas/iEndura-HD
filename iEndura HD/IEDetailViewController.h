@@ -22,5 +22,6 @@
 - (IBAction)numbersMenuButtonClicked:(UIButton *)sender;
 - (void) showNumbersMenuView;
 - (void) hideNumbersMenuView;
+- (IBAction)numbersMenuBackgroungTouchAction:(id)sender;
 
 @end

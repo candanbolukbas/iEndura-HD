@@ -46,4 +46,9 @@
     return [self shouldAutorotateToInterfaceOrientation:self.interfaceOrientation];
 }
 
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
 @end

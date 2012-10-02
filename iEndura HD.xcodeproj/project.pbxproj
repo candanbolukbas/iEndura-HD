@@ -131,6 +131,10 @@
 		ADF05650161A076B007AAE60 /* small-number-8.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF05646161A076B007AAE60 /* small-number-8.png */; };
 		ADF05651161A076B007AAE60 /* small-number-9.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF05647161A076B007AAE60 /* small-number-9.png */; };
 		ADF05652161A076B007AAE60 /* small-number-x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF05648161A076B007AAE60 /* small-number-x.png */; };
+		ADF05659161AD337007AAE60 /* IERootNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF05658161AD337007AAE60 /* IERootNavigationViewController.m */; };
+		ADF0565C161AD6C4007AAE60 /* UINavigationController+autoRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF0565B161AD6C4007AAE60 /* UINavigationController+autoRotate.m */; };
+		ADF05662161AD839007AAE60 /* UITabBarController+autoRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF05661161AD839007AAE60 /* UITabBarController+autoRotate.m */; };
+		ADF05665161AD97D007AAE60 /* UISplitViewController+autoRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF05664161AD97D007AAE60 /* UISplitViewController+autoRotate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -287,6 +291,14 @@
 		ADF05646161A076B007AAE60 /* small-number-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-number-8.png"; sourceTree = "<group>"; };
 		ADF05647161A076B007AAE60 /* small-number-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-number-9.png"; sourceTree = "<group>"; };
 		ADF05648161A076B007AAE60 /* small-number-x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-number-x.png"; sourceTree = "<group>"; };
+		ADF05657161AD337007AAE60 /* IERootNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IERootNavigationViewController.h; sourceTree = "<group>"; };
+		ADF05658161AD337007AAE60 /* IERootNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IERootNavigationViewController.m; sourceTree = "<group>"; };
+		ADF0565A161AD6C3007AAE60 /* UINavigationController+autoRotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+autoRotate.h"; sourceTree = "<group>"; };
+		ADF0565B161AD6C4007AAE60 /* UINavigationController+autoRotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+autoRotate.m"; sourceTree = "<group>"; };
+		ADF05660161AD839007AAE60 /* UITabBarController+autoRotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+autoRotate.h"; sourceTree = "<group>"; };
+		ADF05661161AD839007AAE60 /* UITabBarController+autoRotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+autoRotate.m"; sourceTree = "<group>"; };
+		ADF05663161AD97D007AAE60 /* UISplitViewController+autoRotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISplitViewController+autoRotate.h"; sourceTree = "<group>"; };
+		ADF05664161AD97D007AAE60 /* UISplitViewController+autoRotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISplitViewController+autoRotate.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -565,8 +577,16 @@
 		AD2863511603ACD10038C95B /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				ADF0565A161AD6C3007AAE60 /* UINavigationController+autoRotate.h */,
+				ADF0565B161AD6C4007AAE60 /* UINavigationController+autoRotate.m */,
 				AD2863541603AEB70038C95B /* IEBaseViewController.h */,
 				AD2863551603AEB70038C95B /* IEBaseViewController.m */,
+				ADF05657161AD337007AAE60 /* IERootNavigationViewController.h */,
+				ADF05658161AD337007AAE60 /* IERootNavigationViewController.m */,
+				ADF05660161AD839007AAE60 /* UITabBarController+autoRotate.h */,
+				ADF05661161AD839007AAE60 /* UITabBarController+autoRotate.m */,
+				ADF05663161AD97D007AAE60 /* UISplitViewController+autoRotate.h */,
+				ADF05664161AD97D007AAE60 /* UISplitViewController+autoRotate.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -773,6 +793,10 @@
 				AD969A7A160CA5FA002489AB /* IECamListViewController.m in Sources */,
 				AD105693161190C6009FC9E1 /* IESearchViewController.m in Sources */,
 				AD1064BB1611F4D0009FC9E1 /* IECamImgViewController.m in Sources */,
+				ADF05659161AD337007AAE60 /* IERootNavigationViewController.m in Sources */,
+				ADF0565C161AD6C4007AAE60 /* UINavigationController+autoRotate.m in Sources */,
+				ADF05662161AD839007AAE60 /* UITabBarController+autoRotate.m in Sources */,
+				ADF05665161AD97D007AAE60 /* UISplitViewController+autoRotate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
