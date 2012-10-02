@@ -10,6 +10,7 @@
 #import "IEViewController.h"
 #import "IERemoteLocations.h"
 #import "DDBadgeViewCell.h"
+#import "IECamListViewController.h"
 
 @interface IEMainViewController ()
 
@@ -49,7 +50,7 @@
     
     cell.summary = rl.RemoteLocationName;
     cell.summaryColor = [IEHelperMethods getColorFromRGBColorCode:BACKGROUNG_COLOR_DARK_BLUE];
-    cell.detail = @"Detail text goes here";
+    cell.detail = [rl.SMsIPAddress isEqualToString:@""] ? @"No System Manager" : [NSString stringWithFormat:@"%@", rl.SMsIPAddress];
     cell.badgeText = [NSString stringWithFormat:@"%@", rl.NumberOfCameras];
     cell.badgeColor = [IEHelperMethods getColorFromRGBColorCode:BACKGROUNG_COLOR_DARK_BLUE];
     cell.badgeHighlightedColor = [UIColor lightGrayColor];
@@ -75,11 +76,11 @@
     if(rl.RemoteLocationName == FAVORITE_CAMERAS_TITLE)
         cl.LocationType = IE_Cam_Loc_Fav;
     
-//    IECamListViewController *clvc = [[IECamListViewController alloc] initWithNibName:@"IECamListViewController" bundle:[NSBundle mainBundle]];
-//    [clvc.navigationItem setTitle:cl.RemoteLocation];
-//    clvc.CurrentCameraLocation = cl;
-//    
-//	[self.navigationController pushViewController:clvc animated:YES];
+    IECamListViewController *clvc = [[IECamListViewController alloc] initWithNibName:@"IECamListViewController" bundle:[NSBundle mainBundle]];
+    [clvc.navigationItem setTitle:cl.RemoteLocation];
+    clvc.CurrentCameraLocation = cl;
+    
+	[self.navigationController pushViewController:clvc animated:YES];
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -147,6 +148,11 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation 
 {
     return YES;
+}
+
+- (BOOL)shouldAutorotate
+{
+    return [self shouldAutorotateToInterfaceOrientation:self.interfaceOrientation];
 }
 
 - (void) finishedWithData:(NSData *)data forTag:(iEnduraRequestTypes)tag withObject:(NSObject *)additionalParameters

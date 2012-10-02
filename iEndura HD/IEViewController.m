@@ -113,8 +113,14 @@
     // Release any retained subviews of the main view.
 }
 
-- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
     return YES;
+}
+
+- (BOOL)shouldAutorotate
+{
+     return [self shouldAutorotateToInterfaceOrientation:self.interfaceOrientation];
 }
 
 - (void)CheckAuthResult:(NSTimer *)theTimer

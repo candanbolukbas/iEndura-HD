@@ -12,9 +12,11 @@
 {
     NSString *RemoteLocationName;   
     NSNumber *NumberOfCameras;     
+    NSString *SMsIPAddress;
 }
 
 @property (nonatomic, copy) NSString *RemoteLocationName;
 @property (nonatomic, copy) NSNumber *NumberOfCameras;
+@property (nonatomic, copy) NSString *SMsIPAddress;
 
 @end

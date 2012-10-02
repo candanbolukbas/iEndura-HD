@@ -1,18 +1,18 @@
 //
-//  IECamViewController.m
+//  IESearchViewController.m
 //  iEndura HD
 //
-//  Created by Candan BÖLÜKBAŞ on 21 Sep.
+//  Created by Candan BÖLÜKBAŞ on 25 Sep.
 //  Copyright (c) 2012 T.C. Cumhurbaşkanlığı. All rights reserved.
 //
 
-#import "IECamViewController.h"
+#import "IESearchViewController.h"
 
-@interface IECamViewController ()
+@interface IESearchViewController ()
 
 @end
 
-@implementation IECamViewController
+@implementation IESearchViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,6 +39,11 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return YES;
+}
+
+- (BOOL)shouldAutorotate
+{
+    return [self shouldAutorotateToInterfaceOrientation:self.interfaceOrientation];
 }
 
 @end

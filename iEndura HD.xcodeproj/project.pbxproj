@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD10568E16118F30009FC9E1 /* connecting@2x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD10568D16118F30009FC9E1 /* connecting@2x@2x.png */; };
+		AD105693161190C6009FC9E1 /* IESearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD105691161190C5009FC9E1 /* IESearchViewController.m */; };
+		AD105694161190C6009FC9E1 /* IESearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD105692161190C6009FC9E1 /* IESearchViewController.xib */; };
+		AD1064BB1611F4D0009FC9E1 /* IECamImgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1064B91611F4D0009FC9E1 /* IECamImgViewController.m */; };
+		AD1064BC1611F4D0009FC9E1 /* IECamImgViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD1064BA1611F4D0009FC9E1 /* IECamImgViewController.xib */; };
 		AD2182481603B16D00A11A16 /* IESettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2182461603B16D00A11A16 /* IESettingsViewController.m */; };
 		AD2182491603B16D00A11A16 /* IESettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2182471603B16D00A11A16 /* IESettingsViewController.xib */; };
 		AD2862911603A9DE0038C95B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2862901603A9DE0038C95B /* UIKit.framework */; };
@@ -89,17 +94,53 @@
 		AD28635D1603AF290038C95B /* IEMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD28635B1603AF290038C95B /* IEMainViewController.xib */; };
 		AD2863611603B0160038C95B /* IEFavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD28635F1603B0160038C95B /* IEFavoritesViewController.m */; };
 		AD2863621603B0160038C95B /* IEFavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2863601603B0160038C95B /* IEFavoritesViewController.xib */; };
+		AD846FF1161314CC00B00EDB /* single_view_button.png in Resources */ = {isa = PBXBuildFile; fileRef = AD846FF0161314CC00B00EDB /* single_view_button.png */; };
+		AD846FF81613230C00B00EDB /* nine_view_button.png in Resources */ = {isa = PBXBuildFile; fileRef = AD846FF31613230C00B00EDB /* nine_view_button.png */; };
+		AD846FF91613230C00B00EDB /* nine_view_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD846FF41613230C00B00EDB /* nine_view_button@2x.png */; };
+		AD846FFA1613230C00B00EDB /* quad_view_button.png in Resources */ = {isa = PBXBuildFile; fileRef = AD846FF51613230C00B00EDB /* quad_view_button.png */; };
+		AD846FFB1613230C00B00EDB /* quad_view_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD846FF61613230C00B00EDB /* quad_view_button@2x.png */; };
+		AD846FFC1613230C00B00EDB /* single_view_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD846FF71613230C00B00EDB /* single_view_button@2x.png */; };
 		AD969A61160BA4C0002489AB /* iendura_app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AD969A60160BA4BF002489AB /* iendura_app_icon.png */; };
 		AD969A64160BA4D2002489AB /* iendura_app_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD969A63160BA4D2002489AB /* iendura_app_icon@2x.png */; };
 		AD969A66160BA4E3002489AB /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AD969A65160BA4E3002489AB /* Default-Portrait~ipad.png */; };
 		AD969A68160BA4ED002489AB /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AD969A67160BA4ED002489AB /* Default-Portrait@2x~ipad.png */; };
 		AD969A6A160BA4F8002489AB /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AD969A69160BA4F8002489AB /* Default-Landscape~ipad.png */; };
 		AD969A6C160BA4FF002489AB /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AD969A6B160BA4FF002489AB /* Default-Landscape@2x~ipad.png */; };
-		AD969A70160C85DF002489AB /* IECamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD969A6E160C85DF002489AB /* IECamViewController.m */; };
-		AD969A71160C85DF002489AB /* IECamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD969A6F160C85DF002489AB /* IECamViewController.xib */; };
+		AD969A70160C85DF002489AB /* IECamPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD969A6E160C85DF002489AB /* IECamPlayViewController.m */; };
+		AD969A71160C85DF002489AB /* IECamPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD969A6F160C85DF002489AB /* IECamPlayViewController.xib */; };
+		AD969A75160C9F00002489AB /* IEDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD969A73160C9EFF002489AB /* IEDetailViewController.m */; };
+		AD969A76160C9F00002489AB /* IEDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD969A74160C9F00002489AB /* IEDetailViewController.xib */; };
+		AD969A7A160CA5FA002489AB /* IECamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD969A78160CA5F9002489AB /* IECamListViewController.m */; };
+		AD969A7B160CA5FA002489AB /* IECamListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD969A79160CA5F9002489AB /* IECamListViewController.xib */; };
+		ADF056361619E5DE007AAE60 /* number-1.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF0562D1619E5DE007AAE60 /* number-1.png */; };
+		ADF056371619E5DE007AAE60 /* number-2.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF0562E1619E5DE007AAE60 /* number-2.png */; };
+		ADF056381619E5DE007AAE60 /* number-3.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF0562F1619E5DE007AAE60 /* number-3.png */; };
+		ADF056391619E5DE007AAE60 /* number-4.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF056301619E5DE007AAE60 /* number-4.png */; };
+		ADF0563A1619E5DE007AAE60 /* number-5.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF056311619E5DE007AAE60 /* number-5.png */; };
+		ADF0563B1619E5DE007AAE60 /* number-6.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF056321619E5DE007AAE60 /* number-6.png */; };
+		ADF0563C1619E5DE007AAE60 /* number-7.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF056331619E5DE007AAE60 /* number-7.png */; };
+		ADF0563D1619E5DE007AAE60 /* number-8.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF056341619E5DE007AAE60 /* number-8.png */; };
+		ADF0563E1619E5DE007AAE60 /* number-9.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF056351619E5DE007AAE60 /* number-9.png */; };
+		ADF05649161A076B007AAE60 /* small-number-1.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF0563F161A076B007AAE60 /* small-number-1.png */; };
+		ADF0564A161A076B007AAE60 /* small-number-2.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF05640161A076B007AAE60 /* small-number-2.png */; };
+		ADF0564B161A076B007AAE60 /* small-number-3.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF05641161A076B007AAE60 /* small-number-3.png */; };
+		ADF0564C161A076B007AAE60 /* small-number-4.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF05642161A076B007AAE60 /* small-number-4.png */; };
+		ADF0564D161A076B007AAE60 /* small-number-5.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF05643161A076B007AAE60 /* small-number-5.png */; };
+		ADF0564E161A076B007AAE60 /* small-number-6.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF05644161A076B007AAE60 /* small-number-6.png */; };
+		ADF0564F161A076B007AAE60 /* small-number-7.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF05645161A076B007AAE60 /* small-number-7.png */; };
+		ADF05650161A076B007AAE60 /* small-number-8.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF05646161A076B007AAE60 /* small-number-8.png */; };
+		ADF05651161A076B007AAE60 /* small-number-9.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF05647161A076B007AAE60 /* small-number-9.png */; };
+		ADF05652161A076B007AAE60 /* small-number-x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF05648161A076B007AAE60 /* small-number-x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD10568D16118F30009FC9E1 /* connecting@2x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connecting@2x@2x.png"; sourceTree = "<group>"; };
+		AD105690161190C5009FC9E1 /* IESearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IESearchViewController.h; sourceTree = "<group>"; };
+		AD105691161190C5009FC9E1 /* IESearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IESearchViewController.m; sourceTree = "<group>"; };
+		AD105692161190C6009FC9E1 /* IESearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IESearchViewController.xib; sourceTree = "<group>"; };
+		AD1064B81611F4D0009FC9E1 /* IECamImgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IECamImgViewController.h; sourceTree = "<group>"; };
+		AD1064B91611F4D0009FC9E1 /* IECamImgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IECamImgViewController.m; sourceTree = "<group>"; };
+		AD1064BA1611F4D0009FC9E1 /* IECamImgViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IECamImgViewController.xib; sourceTree = "<group>"; };
 		AD2182451603B16D00A11A16 /* IESettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IESettingsViewController.h; sourceTree = "<group>"; };
 		AD2182461603B16D00A11A16 /* IESettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IESettingsViewController.m; sourceTree = "<group>"; };
 		AD2182471603B16D00A11A16 /* IESettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IESettingsViewController.xib; sourceTree = "<group>"; };
@@ -206,15 +247,46 @@
 		AD28635E1603B0160038C95B /* IEFavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFavoritesViewController.h; sourceTree = "<group>"; };
 		AD28635F1603B0160038C95B /* IEFavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFavoritesViewController.m; sourceTree = "<group>"; };
 		AD2863601603B0160038C95B /* IEFavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IEFavoritesViewController.xib; sourceTree = "<group>"; };
+		AD846FF0161314CC00B00EDB /* single_view_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = single_view_button.png; sourceTree = "<group>"; };
+		AD846FF31613230C00B00EDB /* nine_view_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nine_view_button.png; sourceTree = "<group>"; };
+		AD846FF41613230C00B00EDB /* nine_view_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nine_view_button@2x.png"; sourceTree = "<group>"; };
+		AD846FF51613230C00B00EDB /* quad_view_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quad_view_button.png; sourceTree = "<group>"; };
+		AD846FF61613230C00B00EDB /* quad_view_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quad_view_button@2x.png"; sourceTree = "<group>"; };
+		AD846FF71613230C00B00EDB /* single_view_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "single_view_button@2x.png"; sourceTree = "<group>"; };
 		AD969A60160BA4BF002489AB /* iendura_app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iendura_app_icon.png; sourceTree = "<group>"; };
 		AD969A63160BA4D2002489AB /* iendura_app_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iendura_app_icon@2x.png"; sourceTree = "<group>"; };
 		AD969A65160BA4E3002489AB /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		AD969A67160BA4ED002489AB /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		AD969A69160BA4F8002489AB /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		AD969A6B160BA4FF002489AB /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
-		AD969A6D160C85DF002489AB /* IECamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IECamViewController.h; sourceTree = "<group>"; };
-		AD969A6E160C85DF002489AB /* IECamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IECamViewController.m; sourceTree = "<group>"; };
-		AD969A6F160C85DF002489AB /* IECamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IECamViewController.xib; sourceTree = "<group>"; };
+		AD969A6D160C85DF002489AB /* IECamPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IECamPlayViewController.h; sourceTree = "<group>"; };
+		AD969A6E160C85DF002489AB /* IECamPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IECamPlayViewController.m; sourceTree = "<group>"; };
+		AD969A6F160C85DF002489AB /* IECamPlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IECamPlayViewController.xib; sourceTree = "<group>"; };
+		AD969A72160C9EFF002489AB /* IEDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEDetailViewController.h; sourceTree = "<group>"; };
+		AD969A73160C9EFF002489AB /* IEDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEDetailViewController.m; sourceTree = "<group>"; };
+		AD969A74160C9F00002489AB /* IEDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IEDetailViewController.xib; sourceTree = "<group>"; };
+		AD969A77160CA5F9002489AB /* IECamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IECamListViewController.h; sourceTree = "<group>"; };
+		AD969A78160CA5F9002489AB /* IECamListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IECamListViewController.m; sourceTree = "<group>"; };
+		AD969A79160CA5F9002489AB /* IECamListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IECamListViewController.xib; sourceTree = "<group>"; };
+		ADF0562D1619E5DE007AAE60 /* number-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "number-1.png"; sourceTree = "<group>"; };
+		ADF0562E1619E5DE007AAE60 /* number-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "number-2.png"; sourceTree = "<group>"; };
+		ADF0562F1619E5DE007AAE60 /* number-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "number-3.png"; sourceTree = "<group>"; };
+		ADF056301619E5DE007AAE60 /* number-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "number-4.png"; sourceTree = "<group>"; };
+		ADF056311619E5DE007AAE60 /* number-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "number-5.png"; sourceTree = "<group>"; };
+		ADF056321619E5DE007AAE60 /* number-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "number-6.png"; sourceTree = "<group>"; };
+		ADF056331619E5DE007AAE60 /* number-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "number-7.png"; sourceTree = "<group>"; };
+		ADF056341619E5DE007AAE60 /* number-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "number-8.png"; sourceTree = "<group>"; };
+		ADF056351619E5DE007AAE60 /* number-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "number-9.png"; sourceTree = "<group>"; };
+		ADF0563F161A076B007AAE60 /* small-number-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-number-1.png"; sourceTree = "<group>"; };
+		ADF05640161A076B007AAE60 /* small-number-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-number-2.png"; sourceTree = "<group>"; };
+		ADF05641161A076B007AAE60 /* small-number-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-number-3.png"; sourceTree = "<group>"; };
+		ADF05642161A076B007AAE60 /* small-number-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-number-4.png"; sourceTree = "<group>"; };
+		ADF05643161A076B007AAE60 /* small-number-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-number-5.png"; sourceTree = "<group>"; };
+		ADF05644161A076B007AAE60 /* small-number-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-number-6.png"; sourceTree = "<group>"; };
+		ADF05645161A076B007AAE60 /* small-number-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-number-7.png"; sourceTree = "<group>"; };
+		ADF05646161A076B007AAE60 /* small-number-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-number-8.png"; sourceTree = "<group>"; };
+		ADF05647161A076B007AAE60 /* small-number-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-number-9.png"; sourceTree = "<group>"; };
+		ADF05648161A076B007AAE60 /* small-number-x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-number-x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,12 +349,24 @@
 				AD2863591603AF290038C95B /* IEMainViewController.h */,
 				AD28635A1603AF290038C95B /* IEMainViewController.m */,
 				AD28635B1603AF290038C95B /* IEMainViewController.xib */,
-				AD969A6D160C85DF002489AB /* IECamViewController.h */,
-				AD969A6E160C85DF002489AB /* IECamViewController.m */,
-				AD969A6F160C85DF002489AB /* IECamViewController.xib */,
+				AD969A77160CA5F9002489AB /* IECamListViewController.h */,
+				AD969A78160CA5F9002489AB /* IECamListViewController.m */,
+				AD969A79160CA5F9002489AB /* IECamListViewController.xib */,
+				AD969A6D160C85DF002489AB /* IECamPlayViewController.h */,
+				AD969A6E160C85DF002489AB /* IECamPlayViewController.m */,
+				AD969A6F160C85DF002489AB /* IECamPlayViewController.xib */,
+				AD1064B81611F4D0009FC9E1 /* IECamImgViewController.h */,
+				AD1064B91611F4D0009FC9E1 /* IECamImgViewController.m */,
+				AD1064BA1611F4D0009FC9E1 /* IECamImgViewController.xib */,
+				AD969A72160C9EFF002489AB /* IEDetailViewController.h */,
+				AD969A73160C9EFF002489AB /* IEDetailViewController.m */,
+				AD969A74160C9F00002489AB /* IEDetailViewController.xib */,
 				AD28635E1603B0160038C95B /* IEFavoritesViewController.h */,
 				AD28635F1603B0160038C95B /* IEFavoritesViewController.m */,
 				AD2863601603B0160038C95B /* IEFavoritesViewController.xib */,
+				AD105690161190C5009FC9E1 /* IESearchViewController.h */,
+				AD105691161190C5009FC9E1 /* IESearchViewController.m */,
+				AD105692161190C6009FC9E1 /* IESearchViewController.xib */,
 				AD2182451603B16D00A11A16 /* IESettingsViewController.h */,
 				AD2182461603B16D00A11A16 /* IESettingsViewController.m */,
 				AD2182471603B16D00A11A16 /* IESettingsViewController.xib */,
@@ -317,6 +401,32 @@
 		AD2862C41603AC530038C95B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				ADF0563F161A076B007AAE60 /* small-number-1.png */,
+				ADF05640161A076B007AAE60 /* small-number-2.png */,
+				ADF05641161A076B007AAE60 /* small-number-3.png */,
+				ADF05642161A076B007AAE60 /* small-number-4.png */,
+				ADF05643161A076B007AAE60 /* small-number-5.png */,
+				ADF05644161A076B007AAE60 /* small-number-6.png */,
+				ADF05645161A076B007AAE60 /* small-number-7.png */,
+				ADF05646161A076B007AAE60 /* small-number-8.png */,
+				ADF05647161A076B007AAE60 /* small-number-9.png */,
+				ADF05648161A076B007AAE60 /* small-number-x.png */,
+				ADF0562D1619E5DE007AAE60 /* number-1.png */,
+				ADF0562E1619E5DE007AAE60 /* number-2.png */,
+				ADF0562F1619E5DE007AAE60 /* number-3.png */,
+				ADF056301619E5DE007AAE60 /* number-4.png */,
+				ADF056311619E5DE007AAE60 /* number-5.png */,
+				ADF056321619E5DE007AAE60 /* number-6.png */,
+				ADF056331619E5DE007AAE60 /* number-7.png */,
+				ADF056341619E5DE007AAE60 /* number-8.png */,
+				ADF056351619E5DE007AAE60 /* number-9.png */,
+				AD846FF31613230C00B00EDB /* nine_view_button.png */,
+				AD846FF41613230C00B00EDB /* nine_view_button@2x.png */,
+				AD846FF51613230C00B00EDB /* quad_view_button.png */,
+				AD846FF61613230C00B00EDB /* quad_view_button@2x.png */,
+				AD846FF71613230C00B00EDB /* single_view_button@2x.png */,
+				AD846FF0161314CC00B00EDB /* single_view_button.png */,
+				AD10568D16118F30009FC9E1 /* connecting@2x@2x.png */,
 				AD2862C51603AC530038C95B /* about.png */,
 				AD2862C61603AC530038C95B /* about@2x.png */,
 				AD2862C71603AC530038C95B /* alert_box.png */,
@@ -597,7 +707,37 @@
 				AD969A68160BA4ED002489AB /* Default-Portrait@2x~ipad.png in Resources */,
 				AD969A6A160BA4F8002489AB /* Default-Landscape~ipad.png in Resources */,
 				AD969A6C160BA4FF002489AB /* Default-Landscape@2x~ipad.png in Resources */,
-				AD969A71160C85DF002489AB /* IECamViewController.xib in Resources */,
+				AD969A71160C85DF002489AB /* IECamPlayViewController.xib in Resources */,
+				AD969A76160C9F00002489AB /* IEDetailViewController.xib in Resources */,
+				AD969A7B160CA5FA002489AB /* IECamListViewController.xib in Resources */,
+				AD10568E16118F30009FC9E1 /* connecting@2x@2x.png in Resources */,
+				AD105694161190C6009FC9E1 /* IESearchViewController.xib in Resources */,
+				AD1064BC1611F4D0009FC9E1 /* IECamImgViewController.xib in Resources */,
+				AD846FF1161314CC00B00EDB /* single_view_button.png in Resources */,
+				AD846FF81613230C00B00EDB /* nine_view_button.png in Resources */,
+				AD846FF91613230C00B00EDB /* nine_view_button@2x.png in Resources */,
+				AD846FFA1613230C00B00EDB /* quad_view_button.png in Resources */,
+				AD846FFB1613230C00B00EDB /* quad_view_button@2x.png in Resources */,
+				AD846FFC1613230C00B00EDB /* single_view_button@2x.png in Resources */,
+				ADF056361619E5DE007AAE60 /* number-1.png in Resources */,
+				ADF056371619E5DE007AAE60 /* number-2.png in Resources */,
+				ADF056381619E5DE007AAE60 /* number-3.png in Resources */,
+				ADF056391619E5DE007AAE60 /* number-4.png in Resources */,
+				ADF0563A1619E5DE007AAE60 /* number-5.png in Resources */,
+				ADF0563B1619E5DE007AAE60 /* number-6.png in Resources */,
+				ADF0563C1619E5DE007AAE60 /* number-7.png in Resources */,
+				ADF0563D1619E5DE007AAE60 /* number-8.png in Resources */,
+				ADF0563E1619E5DE007AAE60 /* number-9.png in Resources */,
+				ADF05649161A076B007AAE60 /* small-number-1.png in Resources */,
+				ADF0564A161A076B007AAE60 /* small-number-2.png in Resources */,
+				ADF0564B161A076B007AAE60 /* small-number-3.png in Resources */,
+				ADF0564C161A076B007AAE60 /* small-number-4.png in Resources */,
+				ADF0564D161A076B007AAE60 /* small-number-5.png in Resources */,
+				ADF0564E161A076B007AAE60 /* small-number-6.png in Resources */,
+				ADF0564F161A076B007AAE60 /* small-number-7.png in Resources */,
+				ADF05650161A076B007AAE60 /* small-number-8.png in Resources */,
+				ADF05651161A076B007AAE60 /* small-number-9.png in Resources */,
+				ADF05652161A076B007AAE60 /* small-number-x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,7 +768,11 @@
 				AD28635C1603AF290038C95B /* IEMainViewController.m in Sources */,
 				AD2863611603B0160038C95B /* IEFavoritesViewController.m in Sources */,
 				AD2182481603B16D00A11A16 /* IESettingsViewController.m in Sources */,
-				AD969A70160C85DF002489AB /* IECamViewController.m in Sources */,
+				AD969A70160C85DF002489AB /* IECamPlayViewController.m in Sources */,
+				AD969A75160C9F00002489AB /* IEDetailViewController.m in Sources */,
+				AD969A7A160CA5FA002489AB /* IECamListViewController.m in Sources */,
+				AD105693161190C6009FC9E1 /* IESearchViewController.m in Sources */,
+				AD1064BB1611F4D0009FC9E1 /* IECamImgViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,12 +12,18 @@
 #import "IEGlobals.h"
 #import "IEHelperMethods.h"
 #import "IEDatabaseOps.h"
+#import "IECamPlayViewController.h"
+#import "IEDetailViewController.h"
+#import "IECamListViewController.h"
+#import "IESettingsViewController.h"
+#import "IESearchViewController.h"
+#import "IECamPlayViewController.h"
 
 @implementation IEAppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
-@synthesize userSeesionId, navBarTitle, tabBarController, dbRequiresUpdate, favMenuOpened, currCam;
+@synthesize userSeesionId, navBarTitle, tabBarController, dbRequiresUpdate, favMenuOpened, currCam, splitViewController, detailsViewController, popoverController, camPlayViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -25,14 +31,12 @@
     // Override point for customization after application launch.
 	
 	[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:NO];
-    [UIApplication sharedApplication].keyWindow.frame=CGRectMake(0, 20, 320, 460);
+    //[UIApplication sharedApplication].keyWindow.frame=CGRectMake(0, 20, 1024, 748);
     APP_DELEGATE.userSeesionId = @"";
     APP_DELEGATE.dbRequiresUpdate = NO;
     APP_DELEGATE.favMenuOpened = NO;
     APP_DELEGATE.currCam = nil;
     [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
     
     NSString *app_requires_init = [IEHelperMethods getUserDefaultSettingsString:APP_REQUIRES_INIT_KEY];
     
@@ -46,7 +50,11 @@
         [IEHelperMethods setUserDefaultSettingsString:POZITIVE_VALUE key:AUTO_UPDATE_CAMERA_DB_KEY];
     }
     
+    splitViewController = [[UISplitViewController alloc] init];
+    
     [self setUpTabBar];
+    [self.window makeKeyAndVisible];
+    //self.window.rootViewController = self.viewController;
     return YES;
 
 }
@@ -61,7 +69,7 @@
     firstViewController.title = @"iEndura";
     UINavigationController *firstNavController = [[UINavigationController alloc]initWithRootViewController:firstViewController];
     
-    /*IECamListViewController *secondViewController = [[IECamListViewController alloc]init];
+    IECamListViewController *secondViewController = [[IECamListViewController alloc]init];
     IECameraLocation *cl = [[IECameraLocation alloc] init];
     cl.RemoteLocation = FAVORITE_CAMERAS_TITLE;
     cl.LocationType = IE_Cam_Loc_Fav;
@@ -79,7 +87,7 @@
     forthViewController.title = @"Settings";
     UIImage *tbaImageSettings = [UIImage imageNamed:@"settings.png"];
     forthViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Settings" image:tbaImageSettings tag:3];
-    UINavigationController *forthNavController = [[UINavigationController alloc]initWithRootViewController:forthViewController];*/
+    UINavigationController *forthNavController = [[UINavigationController alloc]initWithRootViewController:forthViewController];
     
     //    IEHelpViewController *fifthViewController = [[IEHelpViewController alloc]init];
     //    firstViewController.title = @"Help";
@@ -94,13 +102,23 @@
     //    UINavigationController *sixhNavController = [[UINavigationController alloc]initWithRootViewController:sixthViewController];
     
     tabBarController = [[UITabBarController alloc] initWithNibName:nil bundle:nil];
-    tabBarController.viewControllers = [[NSArray alloc] initWithObjects:firstNavController, nil];
+    tabBarController.viewControllers = [[NSArray alloc] initWithObjects:firstNavController, secondNavController, thirdNavController, forthNavController, nil];
     tabBarController.tabBar.tintColor = [IEHelperMethods getColorFromRGBColorCode:BACKGROUNG_COLOR_DARKER_BLUE];
-    tabBarController.delegate = self;             
+    NSLog(@"TB: %@", tabBarController.shouldAutorotate ? @"YES" : @"NO");
+    //tabBarController.delegate = self;             
     // add tabbar and show
-    [[self window] addSubview:[tabBarController view]];
-}
+    //[[self window] addSubview:[tabBarController view]];
+    detailsViewController = [[IEDetailViewController alloc] initWithNibName:@"IEDetailViewController" bundle:nil];
+    UINavigationController *detailsNavController = [[UINavigationController alloc] initWithRootViewController:detailsViewController];
+    detailsViewController.title = @"No Camera Selected";
 
+	
+    splitViewController.viewControllers = [NSArray arrayWithObjects:tabBarController, detailsNavController, nil];
+    splitViewController.delegate = detailsViewController;
+    
+	//[[self window] addSubview:splitViewController.view];
+    self.window.rootViewController = self.splitViewController;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -122,6 +140,32 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+	
+	[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:NO];
+    APP_DELEGATE.userSeesionId = @"";
+    APP_DELEGATE.dbRequiresUpdate = NO;
+    APP_DELEGATE.favMenuOpened = NO;
+    APP_DELEGATE.currCam = nil;
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+    
+    NSString *app_requires_init = [IEHelperMethods getUserDefaultSettingsString:APP_REQUIRES_INIT_KEY];
+    
+    if(app_requires_init == nil || [app_requires_init isEqualToString:POZITIVE_VALUE])
+    {
+        IEDatabaseOps *dbOps = [[IEDatabaseOps alloc] init];
+        [dbOps CopyDbToDocumentsFolder];
+        NSArray *favoriteCameras = [[NSArray alloc] init];
+        [IEHelperMethods setUserDefaultSettingsObject:favoriteCameras key:FAVORITE_CAMERAS_KEY];
+        [IEHelperMethods setUserDefaultSettingsString:NEGATIVE_VALUE key:APP_REQUIRES_INIT_KEY];
+        [IEHelperMethods setUserDefaultSettingsString:POZITIVE_VALUE key:AUTO_UPDATE_CAMERA_DB_KEY];
+    }
+    
+    splitViewController = [[UISplitViewController alloc] init];
+    [self setUpTabBar];
+    [self.window makeKeyAndVisible];
+    //self.window.rootViewController = self.viewController;
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
