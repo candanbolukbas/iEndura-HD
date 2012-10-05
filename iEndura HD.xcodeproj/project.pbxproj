@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD10568E16118F30009FC9E1 /* connecting@2x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD10568D16118F30009FC9E1 /* connecting@2x@2x.png */; };
+		AD029AAE161DDF24002C76EE /* full_view_button.png in Resources */ = {isa = PBXBuildFile; fileRef = AD029AAC161DDF24002C76EE /* full_view_button.png */; };
+		AD029AAF161DDF24002C76EE /* full_view_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD029AAD161DDF24002C76EE /* full_view_button@2x.png */; };
+		AD08D94F161E25C400E25D1C /* connecting_large.png in Resources */ = {isa = PBXBuildFile; fileRef = AD08D94D161E25C400E25D1C /* connecting_large.png */; };
+		AD08D950161E25C400E25D1C /* connecting_large@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD08D94E161E25C400E25D1C /* connecting_large@2x.png */; };
 		AD105693161190C6009FC9E1 /* IESearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD105691161190C5009FC9E1 /* IESearchViewController.m */; };
 		AD105694161190C6009FC9E1 /* IESearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD105692161190C6009FC9E1 /* IESearchViewController.xib */; };
 		AD1064BB1611F4D0009FC9E1 /* IECamImgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1064B91611F4D0009FC9E1 /* IECamImgViewController.m */; };
@@ -55,8 +58,8 @@
 		AD2863211603AC540038C95B /* circular_centerminus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2862D81603AC530038C95B /* circular_centerminus@2x.png */; };
 		AD2863221603AC540038C95B /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2862D91603AC530038C95B /* close.png */; };
 		AD2863231603AC540038C95B /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2862DA1603AC530038C95B /* close@2x.png */; };
-		AD2863241603AC540038C95B /* connecting.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2862DB1603AC530038C95B /* connecting.png */; };
-		AD2863251603AC540038C95B /* connecting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2862DC1603AC530038C95B /* connecting@2x.png */; };
+		AD2863241603AC540038C95B /* connecting_small.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2862DB1603AC530038C95B /* connecting_small.png */; };
+		AD2863251603AC540038C95B /* connecting_small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2862DC1603AC530038C95B /* connecting_small@2x.png */; };
 		AD2863261603AC540038C95B /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2862DD1603AC530038C95B /* help.png */; };
 		AD2863271603AC540038C95B /* help@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2862DE1603AC530038C95B /* help@2x.png */; };
 		AD28632A1603AC540038C95B /* iendura_tab_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2862E11603AC530038C95B /* iendura_tab_icon.png */; };
@@ -92,8 +95,6 @@
 		AD2863581603AED50038C95B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2863571603AED50038C95B /* libsqlite3.dylib */; };
 		AD28635C1603AF290038C95B /* IEMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD28635A1603AF290038C95B /* IEMainViewController.m */; };
 		AD28635D1603AF290038C95B /* IEMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD28635B1603AF290038C95B /* IEMainViewController.xib */; };
-		AD2863611603B0160038C95B /* IEFavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD28635F1603B0160038C95B /* IEFavoritesViewController.m */; };
-		AD2863621603B0160038C95B /* IEFavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2863601603B0160038C95B /* IEFavoritesViewController.xib */; };
 		AD846FF1161314CC00B00EDB /* single_view_button.png in Resources */ = {isa = PBXBuildFile; fileRef = AD846FF0161314CC00B00EDB /* single_view_button.png */; };
 		AD846FF81613230C00B00EDB /* nine_view_button.png in Resources */ = {isa = PBXBuildFile; fileRef = AD846FF31613230C00B00EDB /* nine_view_button.png */; };
 		AD846FF91613230C00B00EDB /* nine_view_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD846FF41613230C00B00EDB /* nine_view_button@2x.png */; };
@@ -135,10 +136,15 @@
 		ADF0565C161AD6C4007AAE60 /* UINavigationController+autoRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF0565B161AD6C4007AAE60 /* UINavigationController+autoRotate.m */; };
 		ADF05662161AD839007AAE60 /* UITabBarController+autoRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF05661161AD839007AAE60 /* UITabBarController+autoRotate.m */; };
 		ADF05665161AD97D007AAE60 /* UISplitViewController+autoRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF05664161AD97D007AAE60 /* UISplitViewController+autoRotate.m */; };
+		ADF05669161C58B9007AAE60 /* IEEmptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF05667161C58B9007AAE60 /* IEEmptyViewController.m */; };
+		ADF0566A161C58B9007AAE60 /* IEEmptyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADF05668161C58B9007AAE60 /* IEEmptyViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AD10568D16118F30009FC9E1 /* connecting@2x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connecting@2x@2x.png"; sourceTree = "<group>"; };
+		AD029AAC161DDF24002C76EE /* full_view_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = full_view_button.png; sourceTree = "<group>"; };
+		AD029AAD161DDF24002C76EE /* full_view_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "full_view_button@2x.png"; sourceTree = "<group>"; };
+		AD08D94D161E25C400E25D1C /* connecting_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connecting_large.png; sourceTree = "<group>"; };
+		AD08D94E161E25C400E25D1C /* connecting_large@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connecting_large@2x.png"; sourceTree = "<group>"; };
 		AD105690161190C5009FC9E1 /* IESearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IESearchViewController.h; sourceTree = "<group>"; };
 		AD105691161190C5009FC9E1 /* IESearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IESearchViewController.m; sourceTree = "<group>"; };
 		AD105692161190C6009FC9E1 /* IESearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IESearchViewController.xib; sourceTree = "<group>"; };
@@ -206,8 +212,8 @@
 		AD2862D81603AC530038C95B /* circular_centerminus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circular_centerminus@2x.png"; sourceTree = "<group>"; };
 		AD2862D91603AC530038C95B /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		AD2862DA1603AC530038C95B /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
-		AD2862DB1603AC530038C95B /* connecting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connecting.png; sourceTree = "<group>"; };
-		AD2862DC1603AC530038C95B /* connecting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connecting@2x.png"; sourceTree = "<group>"; };
+		AD2862DB1603AC530038C95B /* connecting_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connecting_small.png; sourceTree = "<group>"; };
+		AD2862DC1603AC530038C95B /* connecting_small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connecting_small@2x.png"; sourceTree = "<group>"; };
 		AD2862DD1603AC530038C95B /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
 		AD2862DE1603AC530038C95B /* help@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help@2x.png"; sourceTree = "<group>"; };
 		AD2862E11603AC530038C95B /* iendura_tab_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iendura_tab_icon.png; sourceTree = "<group>"; };
@@ -248,9 +254,6 @@
 		AD2863591603AF290038C95B /* IEMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEMainViewController.h; sourceTree = "<group>"; };
 		AD28635A1603AF290038C95B /* IEMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEMainViewController.m; sourceTree = "<group>"; };
 		AD28635B1603AF290038C95B /* IEMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IEMainViewController.xib; sourceTree = "<group>"; };
-		AD28635E1603B0160038C95B /* IEFavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEFavoritesViewController.h; sourceTree = "<group>"; };
-		AD28635F1603B0160038C95B /* IEFavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEFavoritesViewController.m; sourceTree = "<group>"; };
-		AD2863601603B0160038C95B /* IEFavoritesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IEFavoritesViewController.xib; sourceTree = "<group>"; };
 		AD846FF0161314CC00B00EDB /* single_view_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = single_view_button.png; sourceTree = "<group>"; };
 		AD846FF31613230C00B00EDB /* nine_view_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nine_view_button.png; sourceTree = "<group>"; };
 		AD846FF41613230C00B00EDB /* nine_view_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nine_view_button@2x.png"; sourceTree = "<group>"; };
@@ -299,6 +302,9 @@
 		ADF05661161AD839007AAE60 /* UITabBarController+autoRotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+autoRotate.m"; sourceTree = "<group>"; };
 		ADF05663161AD97D007AAE60 /* UISplitViewController+autoRotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISplitViewController+autoRotate.h"; sourceTree = "<group>"; };
 		ADF05664161AD97D007AAE60 /* UISplitViewController+autoRotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISplitViewController+autoRotate.m"; sourceTree = "<group>"; };
+		ADF05666161C58B9007AAE60 /* IEEmptyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEEmptyViewController.h; sourceTree = "<group>"; };
+		ADF05667161C58B9007AAE60 /* IEEmptyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IEEmptyViewController.m; sourceTree = "<group>"; };
+		ADF05668161C58B9007AAE60 /* IEEmptyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IEEmptyViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,9 +379,6 @@
 				AD969A72160C9EFF002489AB /* IEDetailViewController.h */,
 				AD969A73160C9EFF002489AB /* IEDetailViewController.m */,
 				AD969A74160C9F00002489AB /* IEDetailViewController.xib */,
-				AD28635E1603B0160038C95B /* IEFavoritesViewController.h */,
-				AD28635F1603B0160038C95B /* IEFavoritesViewController.m */,
-				AD2863601603B0160038C95B /* IEFavoritesViewController.xib */,
 				AD105690161190C5009FC9E1 /* IESearchViewController.h */,
 				AD105691161190C5009FC9E1 /* IESearchViewController.m */,
 				AD105692161190C6009FC9E1 /* IESearchViewController.xib */,
@@ -413,6 +416,10 @@
 		AD2862C41603AC530038C95B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				AD08D94D161E25C400E25D1C /* connecting_large.png */,
+				AD08D94E161E25C400E25D1C /* connecting_large@2x.png */,
+				AD029AAC161DDF24002C76EE /* full_view_button.png */,
+				AD029AAD161DDF24002C76EE /* full_view_button@2x.png */,
 				ADF0563F161A076B007AAE60 /* small-number-1.png */,
 				ADF05640161A076B007AAE60 /* small-number-2.png */,
 				ADF05641161A076B007AAE60 /* small-number-3.png */,
@@ -438,7 +445,6 @@
 				AD846FF61613230C00B00EDB /* quad_view_button@2x.png */,
 				AD846FF71613230C00B00EDB /* single_view_button@2x.png */,
 				AD846FF0161314CC00B00EDB /* single_view_button.png */,
-				AD10568D16118F30009FC9E1 /* connecting@2x@2x.png */,
 				AD2862C51603AC530038C95B /* about.png */,
 				AD2862C61603AC530038C95B /* about@2x.png */,
 				AD2862C71603AC530038C95B /* alert_box.png */,
@@ -461,8 +467,8 @@
 				AD2862D81603AC530038C95B /* circular_centerminus@2x.png */,
 				AD2862D91603AC530038C95B /* close.png */,
 				AD2862DA1603AC530038C95B /* close@2x.png */,
-				AD2862DB1603AC530038C95B /* connecting.png */,
-				AD2862DC1603AC530038C95B /* connecting@2x.png */,
+				AD2862DB1603AC530038C95B /* connecting_small.png */,
+				AD2862DC1603AC530038C95B /* connecting_small@2x.png */,
 				AD2862DD1603AC530038C95B /* help.png */,
 				AD2862DE1603AC530038C95B /* help@2x.png */,
 				AD2862E11603AC530038C95B /* iendura_tab_icon.png */,
@@ -587,6 +593,9 @@
 				ADF05661161AD839007AAE60 /* UITabBarController+autoRotate.m */,
 				ADF05663161AD97D007AAE60 /* UISplitViewController+autoRotate.h */,
 				ADF05664161AD97D007AAE60 /* UISplitViewController+autoRotate.m */,
+				ADF05666161C58B9007AAE60 /* IEEmptyViewController.h */,
+				ADF05667161C58B9007AAE60 /* IEEmptyViewController.m */,
+				ADF05668161C58B9007AAE60 /* IEEmptyViewController.xib */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -688,8 +697,8 @@
 				AD2863211603AC540038C95B /* circular_centerminus@2x.png in Resources */,
 				AD2863221603AC540038C95B /* close.png in Resources */,
 				AD2863231603AC540038C95B /* close@2x.png in Resources */,
-				AD2863241603AC540038C95B /* connecting.png in Resources */,
-				AD2863251603AC540038C95B /* connecting@2x.png in Resources */,
+				AD2863241603AC540038C95B /* connecting_small.png in Resources */,
+				AD2863251603AC540038C95B /* connecting_small@2x.png in Resources */,
 				AD2863261603AC540038C95B /* help.png in Resources */,
 				AD2863271603AC540038C95B /* help@2x.png in Resources */,
 				AD28632A1603AC540038C95B /* iendura_tab_icon.png in Resources */,
@@ -719,7 +728,6 @@
 				AD2863441603AC540038C95B /* updating.png in Resources */,
 				AD2863451603AC540038C95B /* updating@2x.png in Resources */,
 				AD28635D1603AF290038C95B /* IEMainViewController.xib in Resources */,
-				AD2863621603B0160038C95B /* IEFavoritesViewController.xib in Resources */,
 				AD2182491603B16D00A11A16 /* IESettingsViewController.xib in Resources */,
 				AD969A61160BA4C0002489AB /* iendura_app_icon.png in Resources */,
 				AD969A64160BA4D2002489AB /* iendura_app_icon@2x.png in Resources */,
@@ -730,7 +738,6 @@
 				AD969A71160C85DF002489AB /* IECamPlayViewController.xib in Resources */,
 				AD969A76160C9F00002489AB /* IEDetailViewController.xib in Resources */,
 				AD969A7B160CA5FA002489AB /* IECamListViewController.xib in Resources */,
-				AD10568E16118F30009FC9E1 /* connecting@2x@2x.png in Resources */,
 				AD105694161190C6009FC9E1 /* IESearchViewController.xib in Resources */,
 				AD1064BC1611F4D0009FC9E1 /* IECamImgViewController.xib in Resources */,
 				AD846FF1161314CC00B00EDB /* single_view_button.png in Resources */,
@@ -758,6 +765,11 @@
 				ADF05650161A076B007AAE60 /* small-number-8.png in Resources */,
 				ADF05651161A076B007AAE60 /* small-number-9.png in Resources */,
 				ADF05652161A076B007AAE60 /* small-number-x.png in Resources */,
+				ADF0566A161C58B9007AAE60 /* IEEmptyViewController.xib in Resources */,
+				AD029AAE161DDF24002C76EE /* full_view_button.png in Resources */,
+				AD029AAF161DDF24002C76EE /* full_view_button@2x.png in Resources */,
+				AD08D94F161E25C400E25D1C /* connecting_large.png in Resources */,
+				AD08D950161E25C400E25D1C /* connecting_large@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,7 +798,6 @@
 				AD2863481603AC540038C95B /* StringEncryption.m in Sources */,
 				AD2863561603AEB70038C95B /* IEBaseViewController.m in Sources */,
 				AD28635C1603AF290038C95B /* IEMainViewController.m in Sources */,
-				AD2863611603B0160038C95B /* IEFavoritesViewController.m in Sources */,
 				AD2182481603B16D00A11A16 /* IESettingsViewController.m in Sources */,
 				AD969A70160C85DF002489AB /* IECamPlayViewController.m in Sources */,
 				AD969A75160C9F00002489AB /* IEDetailViewController.m in Sources */,
@@ -797,6 +808,7 @@
 				ADF0565C161AD6C4007AAE60 /* UINavigationController+autoRotate.m in Sources */,
 				ADF05662161AD839007AAE60 /* UITabBarController+autoRotate.m in Sources */,
 				ADF05665161AD97D007AAE60 /* UISplitViewController+autoRotate.m in Sources */,
+				ADF05669161C58B9007AAE60 /* IEEmptyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

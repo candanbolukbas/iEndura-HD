@@ -97,15 +97,16 @@
         IECameraClass *cc = [LocAndCamList objectAtIndex:indexPath.row];
         
         [APP_DELEGATE.camPlayViewController.view removeFromSuperview];  
-        APP_DELEGATE.detailsViewController.title = cc.Name;
         IECamPlayViewController *cpvc = [[IECamPlayViewController alloc] init];
             
         cpvc.CurrentCamera = cc;
         NSArray *neighborCameras = [[NSArray alloc] initWithArray:[self GetCamerasOfLocation:CurrentCameraLocation]];
         cpvc.neighborCameras = neighborCameras;
+        cc.neighborCameras = [[NSArray alloc] initWithArray:[self GetCamerasOfLocation:CurrentCameraLocation]];;
     
         if (APP_DELEGATE.detailsViewController.numberOfCamImageView == 1)
         {
+            APP_DELEGATE.detailsViewController.title = cc.Name;
             [APP_DELEGATE.detailsViewController.view addSubview:cpvc.view];
             APP_DELEGATE.camPlayViewController = cpvc;
             [APP_DELEGATE.detailsViewController.view setNeedsDisplay];
@@ -118,6 +119,7 @@
             [APP_DELEGATE.detailsViewController showNumbersMenuView];
             APP_DELEGATE.currCam = cc;
         }
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
     else if([LocOrCam isKindOfClass:[IECameraLocation class]])
     {
@@ -141,6 +143,11 @@
         clvc.CurrentCameraLocation = cl;
         [self.navigationController pushViewController:clvc animated:YES];
     }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [APP_DELEGATE.detailsViewController hideNumbersMenuView];
 }
 
 - (NSMutableArray *) GetCamerasOfLocation:(IECameraLocation *)Location

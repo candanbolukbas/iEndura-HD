@@ -8,6 +8,8 @@
 
 #import "IEDetailViewController.h"
 #import "IECamImgViewController.h"
+#import "IEEmptyViewController.h"
+#import "IECamPlayViewController.h" 
 
 @interface IEDetailViewController ()
 
@@ -34,12 +36,40 @@
     }
 }
 
+- (void)fullViewLoad:(BOOL)show
+{
+    if(self.popoverController != nil)
+        return;
+    
+    if(numberOfCamImageView == 1)
+    {
+        if (APP_DELEGATE.camPlayViewController != nil)
+        {
+            IECamImgViewController *cpvc = (IECamImgViewController *)APP_DELEGATE.camPlayViewController;
+            [cpvc imageViewTouchAction];
+        }
+    }
+    else
+    {
+        IEEmptyViewController *evc = [[IEEmptyViewController alloc] init];
+        evc.subImageViews = [[NSArray alloc] initWithArray:subImageViews];
+        evc.numberOfCamImageView = numberOfCamImageView;
+        [self presentModalViewController:evc animated:YES];
+    }
+}
+
 - (void)singleViewLoad:(BOOL)show
 {
-    //[self clearSubViewsFromDetailsView];
-    //[self resetObjectsWithNumber:1];
-//    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait];
-//    self.view.frame = CGRectMake(0, 0, 1024, 768);
+    [self clearSubViewsFromDetailsView];
+    [self resetObjectsWithNumber:1];
+    if(APP_DELEGATE.camPlayViewController != nil)
+    {
+        [APP_DELEGATE.camPlayViewController.view removeFromSuperview];
+        self.title = APP_DELEGATE.camPlayViewController.CurrentCamera.Name;
+        [self.view addSubview:APP_DELEGATE.camPlayViewController.view];
+    }
+    else
+        self.title = @"No Camera Selected";
 }
 
 - (void)quadViewLoad:(BOOL)show
@@ -47,6 +77,7 @@
     [self clearSubViewsFromDetailsView];
     
     NSMutableArray *mutSubViews = [[NSMutableArray alloc] initWithCapacity:5];
+    self.title = @"4-view";
     
     for(int i=0; i<4; i++)
     {
@@ -66,6 +97,7 @@
     [self clearSubViewsFromDetailsView];
     
     NSMutableArray *mutSubViews = [[NSMutableArray alloc] initWithCapacity:10];
+    self.title = @"9-view";
     
     for(int i=0; i<9; i++)
     {
@@ -91,7 +123,7 @@
 {
     self.navigationController.navigationBar.tintColor = [IEHelperMethods getColorFromRGBColorCode:BACKGROUNG_COLOR_DARK_BLUE];
 
-    UIToolbar *tools = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 120.0f, 44.01f)]; // 44.01 shifts it up 1px for some reason
+    UIToolbar *tools = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 160.0f, 44.01f)]; // 44.01 shifts it up 1px for some reason
     tools.clearsContextBeforeDrawing = NO;
     tools.clipsToBounds = NO;
     tools.barStyle = -1; // clear background
@@ -109,6 +141,11 @@
     bbi.width = 30.0f;
     [buttons addObject:bbi];
     
+    bbi = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"full_view_button.png"] style:UIBarButtonItemStylePlain target:self action:@selector(fullViewLoad:)];
+    bbi.width = 30.0f;
+    bbi.tag = 199;
+    [buttons addObject:bbi];
+    
     // Add buttons to toolbar and toolbar to nav bar.
     [tools setItems:buttons animated:NO];
     UIBarButtonItem *viewButtons = [[UIBarButtonItem alloc] initWithCustomView:tools];
@@ -120,9 +157,31 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)resetnumbersScroolMenu
+{
+    [UIView animateWithDuration:0.1
+                     animations:^{
+                         [self.numbersScrollMenu setFrame:CGRectMake(0, self.numbersScrollMenu.frame.origin.y, 1, 60)];
+                     } completion:^(BOOL finished) {
+                         [UIView animateWithDuration:0.1 animations:^{
+                             [self.numbersScrollMenu setFrame:CGRectMake(0, self.numbersScrollMenu.frame.origin.y, 0, 60)];
+                         }];
+                     }];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
-
+    if(numberOfCamImageView > 1)
+    {
+        [self clearSubViewsFromDetailsView];
+        for (IECamImgViewController *civc in subImageViews)
+        {
+            [self.view addSubview:civc.view];
+        }
+    }
+    
+    [self shouldAutorotateToInterfaceOrientation:[[UIDevice currentDevice] orientation]];
+    [self resetnumbersScroolMenu];
 }
 
 - (void)viewDidUnload
@@ -141,7 +200,7 @@
     [self.navigationItem setLeftBarButtonItem:barButtonItem];
     self.popoverController = pc;
     self.popoverController.delegate = self;
-    self.popoverController.passthroughViews = [[NSArray alloc] initWithObjects:self.numbersMenuView, self.numbersScrollMenu, nil];
+    self.popoverController.passthroughViews = [[NSArray alloc] initWithObjects:self.numbersScrollMenu, self.numbersMenuView, nil];
 }
 
 - (void)splitViewController: (UISplitViewController*)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem 
@@ -181,10 +240,11 @@
                              [self.numbersScrollMenu setFrame:CGRectMake(x, y, width - 20, 60)];
                          } completion:^(BOOL finished) {
                              [UIView animateWithDuration:0.2 animations:^{
-                                 [self.numbersScrollMenu setFrame:CGRectMake(x, y, width, 60)];;
+                                 [self.numbersScrollMenu setFrame:CGRectMake(x, y, width, 60)];
                              }];
                          }];
                      }];
+    [self.view bringSubviewToFront:self.numbersScrollMenu];
 }
 
 - (void) hideNumbersMenuView
@@ -192,13 +252,27 @@
     [UIView animateWithDuration:(0.3)
                      animations:^{
                          [self.numbersMenuView setAlpha:0.0f];
+                         [self.numbersScrollMenu setFrame:CGRectMake(0, self.numbersScrollMenu.frame.origin.y, 0, 60)];
                      }];
+    [self.view bringSubviewToFront:self.numbersMenuView];
 }
 
 - (BOOL)popoverControllerShouldDismissPopover:(UIPopoverController *)popoverController
 {
     [self hideNumbersMenuView];
     return YES;
+}
+
+- (IBAction)numbersMenuButtonClicked:(UIButton *)sender
+{
+    [self hideNumbersMenuView];
+    IECamImgViewController *civc = (IECamImgViewController *)[subImageViews objectAtIndex:sender.tag-101];
+    civc.CurrentCamera = APP_DELEGATE.currCam;
+    civc.fullScreen = NO;
+    civc.selectedImageViewIndex = sender.tag-101;
+    civc.camNameLabel.text = civc.CurrentCamera.Name;
+    civc.neighborCameras = [[NSArray alloc] initWithArray:APP_DELEGATE.currCam.neighborCameras];
+    [civc.screenshotImageView setBackgroundColor:[UIColor blackColor]];
 }
 
 - (IBAction)numbersMenuBackgroungTouchAction:(id)sender
@@ -208,7 +282,17 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    if(numberOfCamImageView == 4)
+    if(numberOfCamImageView ==1)
+    {
+        if (UIInterfaceOrientationIsPortrait(interfaceOrientation))
+        {
+            APP_DELEGATE.camPlayViewController.view.frame = CGRectMake(32, 0, 703, 748);
+        }
+        else
+            APP_DELEGATE.camPlayViewController.view.frame = CGRectMake(0, 0, 703, 748);
+
+    }
+    else if(numberOfCamImageView == 4)
     {
         for(int i=0; i<4; i++)
         {
@@ -216,7 +300,7 @@
             civc.view.frame = CGRectMake(self.view.bounds.size.width/2 * (i%2), self.view.bounds.size.height/2 * (i/2), self.view.bounds.size.width/2, self.view.bounds.size.height/2);
         }
     }
-    else
+    else if(numberOfCamImageView == 9)
     {
         for(int i=0; i<9; i++)
         {
@@ -225,6 +309,7 @@
         }
     }
     [self hideNumbersMenuView];
+    
 	return YES;
 }
 
@@ -237,17 +322,6 @@
 - (NSUInteger)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskAll;
-}
-
-- (IBAction)numbersMenuButtonClicked:(UIButton *)sender
-{
-    [self hideNumbersMenuView];
-    IECamImgViewController *civc = (IECamImgViewController *)[subImageViews objectAtIndex:sender.tag-101];
-    civc.CurrentCamera = APP_DELEGATE.currCam;
-    civc.fullScreen = NO;
-    civc.selectedImageViewIndex = sender.tag-101;
-    civc.camNameLabel.text = civc.CurrentCamera.Name;
-    [civc.screenshotImageView setBackgroundColor:[UIColor blackColor]];
 }
 @end
 

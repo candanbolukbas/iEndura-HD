@@ -89,6 +89,7 @@
         {
             [IEHelperMethods setUserDefaultSettingsString:userNameTextField.text key:IENDURA_USERNAME_KEY];
             [IEHelperMethods setUserDefaultSettingsString:passwordTextField.text key:IENDURA_PASSWORD_KEY];
+            [IEHelperMethods setUserDefaultSettingsString:NEGATIVE_VALUE key:AUTO_UPDATE_CAMERA_DB_KEY];
             APP_DELEGATE.userSeesionId = sc.Value;
             APP_DELEGATE.dbRequiresUpdate = YES;
             [self dismissModalViewControllerAnimated:YES];

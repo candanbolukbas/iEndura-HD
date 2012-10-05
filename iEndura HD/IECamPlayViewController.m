@@ -197,6 +197,8 @@
     {
         [self ResetObjects];
     }
+    double xShift = UIInterfaceOrientationIsPortrait([[UIDevice currentDevice] orientation]) ? 32 : 0;
+    self.view.frame = CGRectMake(xShift, 0, 703, 748);
 }
 
 - (void)viewDidUnload
@@ -232,14 +234,6 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    if(interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
-    {
-        playScrollView.contentSize = CGSizeMake(320, 370);
-    }
-    else 
-    {
-        playScrollView.contentSize = CGSizeMake(320, 370);
-    }
     return YES;
 }
 
@@ -313,8 +307,10 @@
     //[self  setPlaySmoothTimer:nil];
     playSmoothCounter = 30;
     [playSmoothButton setEnabled:YES];
-    screenshotImageView.image = [UIImage imageNamed:@"connecting.png"];
+    screenshotImageView.image = [UIImage imageNamed:@"connecting_large.png"];
     APP_DELEGATE.detailsViewController.title = CurrentCamera.Name;
+    [videoWebView loadHTMLString:@"" baseURL:nil];
+    [videoWebView setHidden:YES];
     [self SetFavoriteButton];
     [self SetPlayButtons];
     [self SetScreenShotImage];

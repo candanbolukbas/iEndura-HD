@@ -115,7 +115,9 @@
 	
     splitViewController.viewControllers = [NSArray arrayWithObjects:tabBarController, detailsNavController, nil];
     splitViewController.delegate = detailsViewController;
-    
+    if ([splitViewController respondsToSelector:@selector(setPresentsWithGesture:)]) {
+        [splitViewController setPresentsWithGesture:NO];
+    }
 	//[[self window] addSubview:splitViewController.view];
     self.window.rootViewController = self.splitViewController;
 }

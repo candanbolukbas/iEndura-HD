@@ -23,6 +23,7 @@
     NSString *SMsIPAddress; 
     NSString *NSMIPAddress; 
     NSString *Port;
+    NSArray *neighborCameras;
 }
 
 @property (nonatomic, copy) NSString *uuid; 
@@ -38,6 +39,7 @@
 @property (nonatomic, copy) NSString *SMsIPAddress; 
 @property (nonatomic, copy) NSString *NSMIPAddress; 
 @property (nonatomic, copy) NSString *Port;
+@property (nonatomic,retain) NSArray *neighborCameras;
 
 - (id) initWithDictionary:(NSDictionary *)jsDict;
 - (NSString *) generateSQLInsertString;

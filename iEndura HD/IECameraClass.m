@@ -10,7 +10,7 @@
 
 @implementation IECameraClass
 
-@synthesize uuid, IP, Name, CameraType, UpnpModelNumber, RTSP_URL, RemoteLocation, LocationRoot, LocationChild, VLCTranscode, SMsIPAddress, NSMIPAddress, Port;
+@synthesize uuid, IP, Name, CameraType, UpnpModelNumber, RTSP_URL, RemoteLocation, LocationRoot, LocationChild, VLCTranscode, SMsIPAddress, NSMIPAddress, Port, neighborCameras;
 
 
 - (id) initWithDictionary:(NSDictionary *)jsDict

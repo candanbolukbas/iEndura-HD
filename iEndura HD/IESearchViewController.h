@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IESearchViewController : UIViewController
+@interface IESearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+{
+    NSArray *CamList;
+    NSArray *AllCams;
+}
+
+@property (weak, nonatomic) IBOutlet UISearchBar *camerasSearchBar;
+@property (weak, nonatomic) IBOutlet UITableView *camerasListTableView;
 
 @end
