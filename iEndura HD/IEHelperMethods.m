@@ -90,6 +90,8 @@
 
 + (NSArray *)getExtractedDataFromJSONArray:(NSData *)data
 {
+    if(data == nil)
+        return nil;
     NSError* error;
     NSArray *jsArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     return jsArray;
@@ -97,6 +99,8 @@
 
 + (NSDictionary *)getExtractedDataFromJSONItem:(NSData *)data
 {
+    if(data == nil)
+        return nil;
     NSError* error;
     NSDictionary *jsDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     return jsDict;

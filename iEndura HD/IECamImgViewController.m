@@ -49,7 +49,8 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    imageTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(UpdateImage:) userInfo:nil repeats:YES];
+    imageTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(UpdateImage:) userInfo:nil repeats:YES];
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -74,14 +75,21 @@
 
 - (void)UpdateImage:(NSTimer *)theTimer 
 {
-    NSURL *camImgUrl = [IEServiceManager GetCamImgUrl:CurrentCamera.IP];
-	IEConnController *controller = [[IEConnController alloc] initWithURL:camImgUrl property:IE_Req_CamImage];
-    controller.addParams = CurrentCamera;
-	controller.delegate = self;
-    if(connectionReady)
+    if (CurrentCamera != nil && CurrentCamera.uuid.length == 0)
     {
-        connectionReady = NO;
-        [controller startConnection];
+        screenshotImageView.image = [UIImage imageNamed:@"no_preview.png"];
+    }
+    else
+    {
+        NSURL *camImgUrl = [IEServiceManager GetCamImgUrl:CurrentCamera.IP];
+        IEConnController *controller = [[IEConnController alloc] initWithURL:camImgUrl property:IE_Req_CamImage];
+        controller.addParams = CurrentCamera;
+        controller.delegate = self;
+        if(connectionReady)
+        {
+            connectionReady = NO;
+            [controller startConnection];
+        }
     }
 }
 
@@ -96,7 +104,12 @@
             NSString *base64EncodedString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
             NSData *imgData = [[NSData alloc] initWithBase64EncodedString:base64EncodedString];
             UIImage *ret = [UIImage imageWithData:imgData];
-            screenshotImageView.image = ret;
+            [UIView transitionWithView:self.view
+                              duration:0.2f
+                               options:UIViewAnimationOptionTransitionCrossDissolve
+                            animations:^{
+                                screenshotImageView.image = ret;
+                            } completion:NULL];
         }
         connectionReady = YES;
     }

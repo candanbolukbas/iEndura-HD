@@ -217,12 +217,19 @@
     [self.numbersScrollMenu setBackgroundColor:[[UIColor whiteColor] colorWithAlphaComponent:0.8f]];
     [self.numbersMenuView setAlpha:1.0f];
     double x = (self.popoverController == nil) ? 0 : 320;
-    //double x = UIInterfaceOrientationIsLandscape([[UIDevice currentDevice] orientation]) ? 0 : 320;
-    //double x = self.numbersScrollMenu.frame.origin.x;
     double y = self.numbersScrollMenu.frame.origin.y;
-    self.numbersScrollMenu.contentSize = CGSizeMake(68 * numberOfCamImageView, 60);
-    double width = numberOfCamImageView > 5 ? 400 : 68 * numberOfCamImageView;
+    self.numbersScrollMenu.contentSize = CGSizeMake(68 * (numberOfCamImageView + 1), 60);
+    NSString *iOsVersion = [UIDevice currentDevice].systemVersion;
     
+    if(([iOsVersion isEqualToString:@"5.0"] || [iOsVersion isEqualToString:@"5.0.1"]) && (self.popoverController != nil))
+    {
+        x += 25;
+        y += 58;
+    }
+    
+    double availableWidth = self.view.frame.size.width - x -25;
+    double expectedWidth = 68 * (numberOfCamImageView + 1);
+    double width = numberOfCamImageView > 5 ? (availableWidth > expectedWidth ? expectedWidth : availableWidth) : expectedWidth;
     for (int i=0; i<9; i++)
     {
         UIButton *bt = (UIButton *)[self.view viewWithTag:101+i];
@@ -266,13 +273,33 @@
 - (IBAction)numbersMenuButtonClicked:(UIButton *)sender
 {
     [self hideNumbersMenuView];
-    IECamImgViewController *civc = (IECamImgViewController *)[subImageViews objectAtIndex:sender.tag-101];
-    civc.CurrentCamera = APP_DELEGATE.currCam;
-    civc.fullScreen = NO;
-    civc.selectedImageViewIndex = sender.tag-101;
-    civc.camNameLabel.text = civc.CurrentCamera.Name;
-    civc.neighborCameras = [[NSArray alloc] initWithArray:APP_DELEGATE.currCam.neighborCameras];
-    [civc.screenshotImageView setBackgroundColor:[UIColor blackColor]];
+    
+    if(sender.tag == 110) //all
+    {
+        int end = numberOfCamImageView;
+        if(APP_DELEGATE.currCam.neighborCameras.count < numberOfCamImageView)
+            end = APP_DELEGATE.currCam.neighborCameras.count;
+        for (int i=0; i < end; i++)
+        {
+            IECamImgViewController *civc = (IECamImgViewController *)[subImageViews objectAtIndex:i];
+            civc.CurrentCamera = (IECameraClass *)[APP_DELEGATE.currCam.neighborCameras objectAtIndex:i];
+            civc.fullScreen = NO;
+            civc.selectedImageViewIndex = i;
+            civc.camNameLabel.text = civc.CurrentCamera.Name;
+            civc.neighborCameras = [[NSArray alloc] initWithArray:APP_DELEGATE.currCam.neighborCameras];
+            [civc.screenshotImageView setBackgroundColor:[UIColor blackColor]];
+        }
+    }
+    else
+    {
+        IECamImgViewController *civc = (IECamImgViewController *)[subImageViews objectAtIndex:sender.tag-101];
+        civc.CurrentCamera = APP_DELEGATE.currCam;
+        civc.fullScreen = NO;
+        civc.selectedImageViewIndex = sender.tag-101;
+        civc.camNameLabel.text = civc.CurrentCamera.Name;
+        civc.neighborCameras = [[NSArray alloc] initWithArray:APP_DELEGATE.currCam.neighborCameras];
+        [civc.screenshotImageView setBackgroundColor:[UIColor blackColor]];
+    }
 }
 
 - (IBAction)numbersMenuBackgroungTouchAction:(id)sender

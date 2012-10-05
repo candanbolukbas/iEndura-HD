@@ -32,7 +32,12 @@
             NSString *base64EncodedString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
             NSData *imgData = [[NSData alloc] initWithBase64EncodedString:base64EncodedString];
             UIImage *ret = [UIImage imageWithData:imgData];
-            screenshotImageView.image = ret;
+            [UIView transitionWithView:self.view
+                              duration:0.2f
+                               options:UIViewAnimationOptionTransitionCrossDissolve
+                            animations:^{
+                                screenshotImageView.image = ret;
+                            } completion:NULL];
         }
         connnectionReady = YES;
     }
