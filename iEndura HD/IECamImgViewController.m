@@ -172,7 +172,7 @@
 {        
     [imageTimer invalidate];
     [self setImageTimer:nil];
-    screenshotImageView.image = [UIImage imageNamed:@"connecting.png"];
+    screenshotImageView.image = [UIImage imageNamed:@"connecting_large.png"];
     APP_DELEGATE.currCam = CurrentCamera;
     self.camNameLabel.text = CurrentCamera.Name;
     [self SetScreenShotImage];
