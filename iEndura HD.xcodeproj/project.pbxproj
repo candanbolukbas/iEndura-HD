@@ -888,11 +888,13 @@
 		AD2862AB1603A9DE0038C95B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Candan BOLUKBAS (T9JK9E6DAN)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iEndura HD/iEndura HD-Prefix.pch";
 				INFOPLIST_FILE = "iEndura HD/iEndura HD-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "87F41C8B-67C0-48BC-B29E-6280FC848B79";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -900,11 +902,13 @@
 		AD2862AC1603A9DE0038C95B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: POLAR MUHENDISLIK VE DANISMANLIK LTD STI";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iEndura HD/iEndura HD-Prefix.pch";
 				INFOPLIST_FILE = "iEndura HD/iEndura HD-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B59A54F2-C7BB-4782-BA22-4537498FAC36";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
